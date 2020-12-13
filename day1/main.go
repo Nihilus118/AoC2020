@@ -50,7 +50,7 @@ func main() {
 	var z3 int
 	for i := 0; i < len(zahlen); i++ {
 		for j := 1; j < len(zahlen)-1; j++ {
-			for k := 1; k < len(zahlen)-2; k++ {
+			for k := 2; k < len(zahlen)-2; k++ {
 				if zahlen[i]+zahlen[j]+zahlen[k] == 2020 {
 					z1, z2, z3 = zahlen[i], zahlen[j], zahlen[k]
 					break
