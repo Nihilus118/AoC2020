@@ -22,6 +22,7 @@ func contains(s []string, str string) bool {
 }
 
 func validate(daten string) bool {
+	// Erstmal eine Map aus dem String erstellen um sinnvoll damit zu arbeiten
 	split := strings.Split(daten, " ")
 	sort.Strings(split)
 
