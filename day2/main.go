@@ -16,26 +16,23 @@ type passwort struct {
 	max       int
 }
 
-func pwAusDatei(zeile string) passwort {
+func pwAusDatei(zeile string) (p passwort) {
 	split := strings.Split(zeile, ":")
-	text := strings.TrimSpace(split[1])
+	p.text = strings.TrimSpace(split[1])
 	split = strings.Split(split[0], " ")
-	buchstabe := split[1]
+	p.buchstabe = split[1]
 	split = strings.Split(split[0], "-")
-	min, err := strconv.Atoi(split[0])
+	var err error
+	p.min, err = strconv.Atoi(split[0])
 	if err != nil {
 		log.Fatal(err)
 	}
-	max, err := strconv.Atoi(split[1])
+	p.max, err = strconv.Atoi(split[1])
 	if err != nil {
 		log.Fatal(err)
 	}
-	return passwort{
-		text:      text,
-		buchstabe: buchstabe,
-		min:       min,
-		max:       max,
-	}
+
+	return p
 }
 
 // Teil 1
