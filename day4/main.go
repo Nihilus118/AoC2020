@@ -82,9 +82,6 @@ func validate(daten string) bool {
 		if err != nil {
 			return false
 		}
-		if !(strings.HasSuffix(val, "cm") || strings.HasSuffix(val, "in")) {
-			log.Fatal("F")
-		}
 
 		if strings.HasSuffix(val, "in") {
 			if !(zahl >= 59 && zahl <= 76) {
