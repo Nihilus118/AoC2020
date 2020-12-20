@@ -23,9 +23,6 @@ func main() {
 	var trees []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		if err != nil {
-			log.Fatal(err)
-		}
 		// Karte in Stringslice
 		trees = append(trees, scanner.Text())
 	}

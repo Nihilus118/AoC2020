@@ -153,10 +153,6 @@ func main() {
 	var temp string = ""
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		if err != nil {
-			log.Fatal(err)
-		}
-
 		if scanner.Text() == "" {
 			// Passdaten zuende, also in Liste
 			paesse = append(paesse, temp)

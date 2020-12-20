@@ -19,10 +19,6 @@ func main() {
 	var gruppen []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		if err != nil {
-			log.Fatal(err)
-		}
-
 		gruppen = append(gruppen, scanner.Text())
 	}
 

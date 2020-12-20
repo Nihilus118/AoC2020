@@ -67,9 +67,6 @@ func main() {
 	valide2 := 0
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		if err != nil {
-			log.Fatal(err)
-		}
 		// Ist das Passwort ok?
 		pw := pwAusDatei(scanner.Text())
 		// Teil 1
